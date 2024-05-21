@@ -1,0 +1,243 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Navbar Styles */
+
+.navbar {
+    background-color: #212529; /* Ubah warna background navbar */
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row; /* Ubah menjadi baris horizontal */
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px; /* Ruang kiri */
+    padding-right: 15px; /* Ruang kanan */
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-brand {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    flex-direction: row; /* Ubah menjadi baris horizontal */
+    align-items: center;
+}
+
+.navbar .nav-item {
+    margin-right: 20px;
+}
+
+.navbar .nav-link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+    color: #17a2b8;
+}
+
+/* Navbar Toggler Icon Styles */
+.navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+/* Dropdown Menu Styles */
+.navbar .dropdown-menu {
+    background-color: #343a40; /* Ubah warna background dropdown menu */
+}
+
+.navbar .dropdown-menu a {
+    color: #fff;
+}
+
+.navbar .dropdown-menu a:hover {
+    background-color: #495057; /* Ubah warna background saat hover pada dropdown menu */
+}
+
+/* Active Link Styles */
+.navbar .nav-item.active .nav-link {
+    color: #17a2b8;
+}
+
+/* Disabled Link Styles */
+.navbar .nav-item.disabled .nav-link {
+    color: #6c757d;
+}
+
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 60px ;
+}
+.custom-carousel {
+    margin-top: 70px; /* Atur margin atas sesuai kebutuhan Anda */
+}
+
+/* Mengatur tinggi carousel */
+.carousel-inner img {
+    height: 500px; /* Sesuaikan dengan tinggi yang diinginkan */
+}
+
+/* Mengatur warna teks caption */
+.carousel-caption h5,
+.carousel-caption p {
+    color: #fff; /* Warna teks */
+}
+
+/* Mengatur latar belakang dan opacity caption */
+.carousel-caption {
+    background-color: rgba(130, 110, 110, 0.5); /* Warna latar belakang dengan opacity */
+    padding: 10px; /* Padding untuk isi caption */
+}
+
+/* Mengatur warna panah kontrol */
+.carousel-control-prev,
+.carousel-control-next {
+    color: #000000; /* Warna panah */
+    background-color: transparent; /* Transparan */
+    border :#17a2b8; /* Hapus border */
+}
+
+
+
+/* Hero Section Styles */
+.hero {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-features {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-features li {
+    margin-right: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Why Choose Us Section Styles */
+.why-choose-us {
+    padding: 50px 0;
+}
+
+.why-choose-us h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.why-choose-us-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    text-align: center;
+}
+
+.item img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.item p {
+    color: #666;
+}
+
+/* Our Services Section Styles */
+.our-services {
+    padding: 50px 0;
+}
+
+.our-services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.our-services-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+/* Get a Quote Section Styles */
+.get-a-quote {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.get-a-quote h2 {
+    margin-bottom: 20px;
+}
+
+.get-a-quote p {
+    margin-bottom: 30px;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .nav-links li {
+        margin-right: 10px;
+    }
+
+    .item img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+}
