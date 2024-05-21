@@ -268,7 +268,7 @@ if (isset($_POST["submit"])) {
                     <p>cintha22059@mhs.unesa.ac.id</p>
                     <div class="user-status-container">
                         <div class="user-status">
-                            <span>Terverifikasi</span> 0
+                            <span>ter</span> 0
                         </div>
                         <div class="user-status">
                             <span>Diproses</span> 0
