@@ -17,7 +17,7 @@
     }
 
     .title {
-      margin-top:60px;
+      margin-top: 60px;
       background-color: #760504;
       padding: 20px;
       text-align: center;
@@ -161,138 +161,81 @@
   <h2 class="title">Galeri Pengaduan</h2>
   <p style="text-align:center;padding-bottom:20px;color:white;">Di sini, Anda dapat melihat pengaduan-pengaduan
     sebelumnya yang telah diatasi atau masih dalam proses penanganan.</p>
-  <div class="complaint pending">
-    <p class="date"><span>2022-02-20</span> <span class="type">Kondisi Fisik Lingkungan</span></p>
-    <h3>Pohon Tumbang di Taman Kota</h3>
-    <p>Pengaduan ini melaporkan pohon yang tumbang di Taman Kota Utama. Keadaan pohon tersebut mengancam keselamatan
-      pengunjung dan memerlukan perbaikan segera.</p>
-    <div class="evidence">
-      <img src="https://cdn.antaranews.com/cache/730x487/2019/12/10/pohon-tumbang.jpeg" class="inline">
-    </div>
-    <div>Evidence images<br>
-      <a href="path/to/document.pdf" download>Download document</a>
-    </div>
-    <div class="status pending" style="color: white;">Belum Diproses</div>
-    <div class="features">
-      <div class="feature">
-        <i class="fa fa-comments"></i>
-        <button id="komenButton1" onclick="" style="background-color:transparent; border:none;">
-          <img src="img/komen.png" alt="Komen" class="komen-image"><br>
-          Komentar
-        </button>
-      </div>
-      <div class="feature">
-        <i class="fa fa-thumbs-o-up"></i>
-        <button id="likeButton1" onclick="likeComplaint(1, this)" style="background-color:transparent; border:none;">
-          <img src="img/like.png" alt="Like" class="like-image"><br>
-          Suka
-        </button>
-      </div>
-      <div class="feature">
-        <i class="fa fa-share-alt"></i>
-        <button id="shareButton1" onclick="shareComplaint(1)" style="background-color:transparent; border:none;">
-          <img src="img/share.png" alt="Share" class="share-image"><br>
-          Bagikan</button>
-      </div>
-    </div>
-  </div>
+  <?php
+  include ("db_connect.php");
+  $sql = "SELECT * FROM pengaduan";
+  $hasil = mysqli_query($db, $sql);
 
-  <div class="complaint processing">
-    <p class="date"><span>2022-02-20</span> <span class="type">Pelanggaran Lalu Lintas dan Aksesibilitas</span></p>
-    <h3>Penyalahgunaan Tempat Parkir Disabilitas</h3>
-    <p>Pengguna lain yang tidak berkepentingan menggunakan tempat parkir disabilitas di depan pusat perbelanjaan.
-      Tindakan ini merugikan dan menghambat akses bagi mereka yang membutuhkan.</p>
-    <div class="evidence">
-      <img src="https://rm.id/images/foto/med/parkiran_difabel_bagi_penyandang_disabilitas_26466.jpg" class="inline">
-    </div>
-    <div>Evidence images <br>
-      <a href="path/to/document.pdf" download>Download document</a>
-    </div>
-    <div class="status processing"style="color: white;">Sedang Diproses</div>
-    <div class="features">
-      <div class="feature">
-        <i class="fa fa-comments"></i>
-        <button id="komenButton1" onclick="" style="background-color:transparent; border:none;">
-          <img src="img/komen.png" alt="Komen" class="komen-image"><br>
-          Komentar
-        </button>
-      </div>
-      <div class="feature">
-        <i class="fa fa-thumbs-o-up"></i>
-        <button id="likeButton1" onclick="likeComplaint(1, this)" style="background-color:transparent; border:none;">
-          <img src="img/like.png" alt="Like" class="like-image"><br>
-          Suka
-        </button>
-      </div>
-      <div class="feature">
-        <i class="fa fa-share-alt"></i>
-        <button id="shareButton1" onclick="shareComplaint(1)" style="background-color:transparent; border:none;">
-          <img src="img/share.png" alt="Share" class="share-image"><br>
-          Bagikan</button>
-      </div>
-    </div>
-  </div>
+  $jmlArtikel = mysqli_num_rows($hasil);
+  if ($jmlArtikel > 0) {
+    while ($row = mysqli_fetch_assoc($hasil)) {
 
-  <div class="complaint completed">
-    <p class="date"><span>2022-01-01</span> <span class="type">Pencemaran Lingkungan</span></p>
-    <h3>Sampah Tumpahan di Sungai</h3>
-    <p>Sungai di dekat pemukiman kami tercemar oleh tumpahan sampah, menciptakan ancaman bagi lingkungan dan kesehatan
-      masyarakat setempat. Perlu tindakan pembersihan dan pencegahan lebih lanjut.</p>
-    <div class="evidence">
-      <img src="https://cdn.medcom.id/dynamic/photos/2019/09/03/39427/sampah-penuhi-sungai-kali-baru-02.jpg?w=1111" class="inline">
-      <img src="http://www.jurnalasia.com/wp-content/uploads/2015/01/23.jpg" class="inline">
-
-    </div>
-    <div>Evidence images <br>
-      <a href="path/to/document.pdf" download>Download document</a>
-    </div>
-    <div class="status completed"style="color: white;">Selesai</div>
-    <div class="features">
-      <div class="feature">
-        <i class="fa fa-comments"></i>
-        <button id="komenButton1" onclick="" style="background-color:transparent; border:none;">
-          <img src="img/komen.png" alt="Komen" class="komen-image"><br>
-          Komentar
-        </button>
-      </div>
-      <div class="feature">
-        <i class="fa fa-thumbs-o-up"></i>
-        <button id="likeButton1" onclick="likeComplaint(1, this)" style="background-color:transparent; border:none;">
-          <img src="img/like.png" alt="Like" class="like-image"><br>
-          Suka
-        </button>
-      </div>
-      <div class="feature">
-        <i class="fa fa-share-alt"></i>
-        <button id="shareButton1" onclick="shareComplaint(1)" style="background-color:transparent; border:none;">
-          <img src="img/share.png" alt="Share" class="share-image"><br>
-          Bagikan</button>
-      </div>
-    </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+Zmi2KxmeTISw3gxy6R9W7D1bTl5V5ltzQ+Ay4b+8Qk6F9z"
-    crossorigin="anonymous"></script>
-
-  <script>
-    function likeComplaint(complaintId, button) {
-      // Tambahkan logika untuk menambahkan suka pada pengaduan dengan ID tertentu
-      alert("Pengaduan dengan ID " + complaintId + " disukai!");
-
-      // Ubah gambar like menjadi likeaktif
-      var likeImage = button.querySelector('.like-image');
-      likeImage.src = 'img/likeaktif (3).png';
+      ?>
+      <div class="container">
+        <div class="row">
+          <div class="complaint pending">
+            <p class="date"><span><?=$row["tanggal"];?></span> <span class="type">Kondisi Fisik Lingkungan</span></p>
+            <h3>Pohon Tumbang di Taman Kota</h3>
+            <p><?= $row["pesan"];?> </p>
+            <div class="evidence">
+              <img src="https://cdn.antaranews.com/cache/730x487/2019/12/10/pohon-tumbang.jpeg" class="inline">
+            </div>
+            <div>Evidence images<br>
+              <a href="path/to/document.pdf" download>Download document</a>
+            </div>
+            <div class="status pending" style="color: white;">Belum Diproses</div>
+            <div class="features">
+              <div class="feature">
+                <i class="fa fa-comments"></i>
+                <button id="komenButton1" onclick="" style="background-color:transparent; border:none;">
+                  <img src="img/komen.png" alt="Komen" class="komen-image"><br>
+                  Komentar
+                </button>
+              </div>
+              <div class="feature">
+                <i class="fa fa-thumbs-o-up"></i>
+                <button id="likeButton1" onclick="likeComplaint(1, this)"
+                  style="background-color:transparent; border:none;">
+                  <img src="img/like.png" alt="Like" class="like-image"><br>
+                  Suka
+                </button>
+              </div>
+              <div class="feature">
+                <i class="fa fa-share-alt"></i>
+                <button id="shareButton1" onclick="shareComplaint(1)" style="background-color:transparent; border:none;">
+                  <img src="img/share.png" alt="Share" class="share-image"><br>
+                  Bagikan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php
     }
+  }
+  ?>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+Zmi2KxmeTISw3gxy6R9W7D1bTl5V5ltzQ+Ay4b+8Qk6F9z"
+      crossorigin="anonymous"></script>
 
-    function shareComplaint(complaintId) {
-      // Tambahkan logika untuk membagikan pengaduan kepada teman
-      alert("Pengaduan dengan ID " + complaintId + " dibagikan!");
-    }
+    <script>
+      function likeComplaint(complaintId, button) {
+        // Tambahkan logika untuk menambahkan suka pada pengaduan dengan ID tertentu
+        alert("Pengaduan dengan ID " + complaintId + " disukai!");
 
-  </script>
+        // Ubah gambar like menjadi likeaktif
+        var likeImage = button.querySelector('.like-image');
+        likeImage.src = 'img/likeaktif (3).png';
+      }
+
+      function shareComplaint(complaintId) {
+        // Tambahkan logika untuk membagikan pengaduan kepada teman
+        alert("Pengaduan dengan ID " + complaintId + " dibagikan!");
+      }
+
+    </script>
 </body>
 
 </html>
