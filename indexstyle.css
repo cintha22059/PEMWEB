@@ -23,6 +23,14 @@ body {
     padding-left: 15px; /* Ruang kiri */
     padding-right: 15px; /* Ruang kanan */
 }
+.navbar {
+    background-color: transparent !important;
+    transition: background-color 0.5s ease;
+  }
+  
+.navbar.scrolled {
+    background-color: #760504 !important; /* Change this to your desired color */
+}
 
 .navbar .container-fluid {
     display: flex;
@@ -53,7 +61,7 @@ body {
 }
 
 .navbar .nav-link:hover {
-    color: #17a2b8;
+    color: #000000;
 }
 
 /* Navbar Toggler Icon Styles */
@@ -68,25 +76,21 @@ body {
 
 /* Dropdown Menu Styles */
 .navbar .dropdown-menu {
-    background-color: #343a40; /* Ubah warna background dropdown menu */
+    background-color: #760504; /* Ubah warna background dropdown menu */
 }
 
 .navbar .dropdown-menu a {
     color: #fff;
 }
 
-.navbar .dropdown-menu a:hover {
-    background-color: #495057; /* Ubah warna background saat hover pada dropdown menu */
-}
-
 /* Active Link Styles */
 .navbar .nav-item.active .nav-link {
-    color: #17a2b8;
+    color: #ffc875;
 }
 
 /* Disabled Link Styles */
 .navbar .nav-item.disabled .nav-link {
-    color: #6c757d;
+    color: #760504;
 }
 
 
@@ -95,6 +99,7 @@ header {
     text-align: center;
     padding: 60px 0;
 }
+
 .custom-carousel {
     margin-top: 70px; /* Atur margin atas sesuai kebutuhan Anda */
 }
@@ -103,7 +108,23 @@ header {
 .carousel-inner img {
     height: 500px; /* Sesuaikan dengan tinggi yang diinginkan */
 }
+.carousel-centered {
+    margin: 0 auto;
+    width: 67%;
+}
 
+.carousel-item {
+    text-align: center;
+    align-items: center;
+}
+
+.carousel-caption {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
 /* Mengatur warna teks caption */
 .carousel-caption h5,
 .carousel-caption p {
@@ -166,16 +187,34 @@ header {
 }
 
 .why-choose-us-items {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
 }
-
-.item {
+.layanan-text {
     text-align: center;
 }
 
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+.item-link {
+    display: block;
+}
+.item-1:hover, .item-1:focus-visible {
+    transform: scale(1.1); /* Ukuran lebih besar saat dihover atau diklik */
+}
 .item img {
-    width: 80px;
+    width: 100px;
     margin-bottom: 20px;
 }
 
@@ -205,25 +244,8 @@ header {
 
 .item img {
     width: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-
-/* Get a Quote Section Styles */
-.get-a-quote {
-    background-color: #333;
-    color: #fff;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.get-a-quote h2 {
-    margin-bottom: 20px;
-}
-
-.get-a-quote p {
-    margin-bottom: 30px;
-}
-
 
 /* Media Queries */
 @media (max-width: 768px) {
