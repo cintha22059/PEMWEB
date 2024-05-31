@@ -23,7 +23,7 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="About.php">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="notification.html">Notifikasi</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.php">Sign In</a></li>
             </ul>
         </div>
     </div>
