@@ -10,28 +10,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
 </head>
 <body> 
-    <style>
-        .masthead {
-            height: 100vh;
-            min-height: 500px;
-            background-image: url('https://img.artguru-cdn.com/image/aigc/ce8f6ab85574aab3a84aafe1e5eaefd2_3448_1940.webp');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        #tuban {
-            width: 50px;
-        }
-        @media  only screen and (max-width: 950px) {
-             #formsearch {
-                margin-left:25px;
-                margin-right:25px;
-            }
-            #jaya {
-		      width:50px;
-	        }
-        }
-    </style> 
         <?php include "navbar.html" ?>
     <header class="masthead">
         <div class="container h-100">
