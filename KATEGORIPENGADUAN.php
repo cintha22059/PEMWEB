@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+include "conn/sesion.php"
+?>
+!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -224,7 +227,7 @@
 		}
 	</style>
 </head>
-<?php include "navbar.html" ?>
+<?php include "asset/navbar.php" ?>
 
 <body>
 	<div class="header">

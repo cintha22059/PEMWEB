@@ -1,3 +1,6 @@
+<?php
+include "conn/sesion.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,7 +82,7 @@ tr:nth-child(even) {
 }
 </style>
 </head>
-<?php include "navbar.html" ?>
+<?php include "asset/navbar.php" ?>
 <body>
 <div class="container">
     <h1>Lacak Pengaduan</h1>
@@ -89,7 +92,7 @@ tr:nth-child(even) {
         <input type="submit" name="submit" value="Lacak">
     </form>
     <?php
-    include "db_connect.php"; // Menghubungkan ke file db_connect.php
+    include "conn/db_connect.php"; // Menghubungkan ke file conn_connect.php
 
     if (isset($_POST["submit"])) {
         $nomor_pengaduan = $_POST["nomor_pengaduan"];
@@ -99,10 +102,10 @@ tr:nth-child(even) {
                 FROM pengaduan 
                 JOIN status_pengaduan ON pengaduan.id_pengaduan = status_pengaduan.id_pengaduan
                 WHERE pengaduan.id_pengaduan = ?";
-        $stmt = $db->prepare($sql);
+        $stmt = $conn->prepare($sql);
 
         if (!$stmt) {
-            echo "Error saat menyiapkan statement: " . $db->error;
+            echo "Error saat menyiapkan statement: " . $conn->error;
         } else {
             // Bind parameter ke statement
             $stmt->bind_param("i", $nomor_pengaduan);

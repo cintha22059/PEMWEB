@@ -1,3 +1,6 @@
+<?php
+include "conn/sesion.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,7 +138,7 @@ header .contact-info p {
     </style>
 </head>
 <body>
-<?php include "navbar.html" ?>
+<?php include "navbar.php" ?>
     <header>
         <div class="logo">
             <img src="logo.png" alt="Logo">

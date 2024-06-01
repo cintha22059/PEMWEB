@@ -1,4 +1,6 @@
-
+<?php
+include "conn/sesion.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,7 +168,7 @@
 </style>
 </head>
 <body>
-    <?php include "navbar.html" ?>
+    <?php include "asset/navbar.php" ?>
 <header>
     <h1>Layanan Pengaduan - Ruang Berita</h1>
 </header>

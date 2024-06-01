@@ -1,15 +1,19 @@
+<?php
+include "conn/sesion.php" ;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layanan Aspirasi Pengaduan Online Tuban</title>
-    <link rel="stylesheet" href="i.css">
+    <link rel="stylesheet" href="indexstyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
 </head>
 <body>
-<?php include "navbar.html" ?> 
+<?php include "conn/navbar.php";
+?> 
     <header>
     <div class="py-5 team4">
   <div class="container">

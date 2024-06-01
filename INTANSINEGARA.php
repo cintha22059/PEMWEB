@@ -224,7 +224,7 @@
 		}
 	</style>
 </head>
-<?php include "navbar.html" ?>
+<?php include "asset/navbar.php" ?>
 
 <body>
 	<div" class="header">

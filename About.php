@@ -1,3 +1,6 @@
+<?php
+include "conn/sesion.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +9,6 @@
 <title>About - Layanan Pengaduan Online Masyarakat Tuban</title>
     <link rel="stylesheet" href="indexstyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 <style>
 body {
@@ -111,7 +113,7 @@ p {
 }
 </style></head>
 <body>
-    <?php include "navbar.html" ?>
+    <?php include "asset/navbar.php" ?>
     <header>
         <div class="container">
             <h1>Layanan Pengaduan Online Masyarakat Tuban</h1>

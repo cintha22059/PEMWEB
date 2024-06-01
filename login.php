@@ -1,69 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "public_web_services";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
-}
-
-if (isset($_POST['signup'])) {
-    $username = $_POST['txt'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    // Check if username or email already exists
-    $check_user = $conn->prepare("SELECT * FROM users WHERE username = ? OR email = ?");
-    $check_user->bind_param("ss", $username, $email);
-    $check_user->execute();
-    $result = $check_user->get_result();
-
-    if ($result->num_rows > 0) {
-        echo "<script>alert('Username or email already exists');</script>";
-    } else {
-        $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $username, $email, $hashed_password);
-
-        if ($stmt->execute()) {
-            echo "<script>alert('Sign up successful');</script>";
-        } else {
-            echo "<script>alert('Error: " . $stmt->error . "');</script>";
-        }
-        $stmt->close();
-    }
-    $check_user->close();
-}
-
-if (isset($_POST['login'])) {
-    session_start();
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row['password'])) {
-            $_SESSION['username'] = $row['username'];
-            header("Location: index.php"); // Redirect to home page
-            exit();
-        } else {
-            echo "<script>alert('Password salah');</script>";
-        }
-    } else {
-        echo "<script>alert('Email tidak ditemukan');</script>";
-    }
-    $stmt->close();
-}
-
-$conn->close();
+include "conn\login_signup.php"
 ?>
 
 <!DOCTYPE html>
@@ -74,6 +10,7 @@ $conn->close();
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
 <style>
+/* Tambahkan gaya CSS sesuai dengan kebutuhan Anda */
 body {
     margin: 0;
     padding: 0;
@@ -155,7 +92,6 @@ button:hover {
     color: #B12B24;
     transform: scale(.6);
 }
-
 #chk:checked ~ .login {
     transform: translateY(-500px);
 }
@@ -186,7 +122,7 @@ button:hover {
         <div class="signup">
             <form action="" method="POST">
                 <label for="chk" aria-hidden="true">Sign up</label>
-                <input type="text" name="txt" placeholder="User name" required>
+                <input type="text" name="username" placeholder="User name" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit" name="signup">Sign up</button>
