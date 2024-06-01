@@ -232,7 +232,7 @@ if (isset($_POST["submit"])) {
                     }
                     ?>
                     <div class="form-group">
-                        <label for="judul_pengaduan">judul_pegaduan:</label>
+                        <label for="judul_pengaduan">Judul Pegaduan:</label>
                         <input type="text" name="judul_pengaduan" required>
                     </div>
                     <div class="form-group">
