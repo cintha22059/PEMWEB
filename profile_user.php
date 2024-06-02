@@ -62,6 +62,14 @@ include "conn/profile.php";
 </head>
 
 <body>
+  <?php
+  include "asset/navbar.php"
+    ?>
+  <svg style="margin-top: -18%; width: 95%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#760504" fill-opacity="1"
+      d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+    </path>
+  </svg>
   <section>
     <div class="container rounded bg-white mt-4 mb-4">
       <div class="row">
@@ -69,7 +77,8 @@ include "conn/profile.php";
           <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
               width="100px"
               src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span
-              class="font-weight-bold"><?php echo htmlspecialchars($username); ?></span><span class="text-black-50"><?php echo htmlspecialchars($profile['email']); ?></span><span>
+              class="font-weight-bold"><?php echo htmlspecialchars($username); ?></span><span
+              class="text-black-50"><?php echo htmlspecialchars($profile['email']); ?></span><span>
             </span></div>
         </div>
         <div class="col-md-5 ">
@@ -80,19 +89,26 @@ include "conn/profile.php";
               </div>
               <div class="row mt-3">
                 <div class="col-md-12"><label class="labels">Nama Lengkap</label><input type="text" class="form-control"
-                    name="nama_lengkap" placeholder="Masukkan Nama Lengkap" value="<?php echo htmlspecialchars($profile['nama_lengkap']); ?>"></div>
-                <div class="col-md-12"><label class="labels">Nomor Telefon</label><input type="text" class="form-control"
-                    name="nomor_telefon" placeholder="Masukkan Nomor Telefon" value="<?php echo htmlspecialchars($profile['nomor_telefon']); ?>"></div>
+                    name="nama_lengkap" placeholder="Masukkan Nama Lengkap"
+                    value="<?php echo htmlspecialchars($profile['nama_lengkap']); ?>"></div>
+                <div class="col-md-12"><label class="labels">Nomor Telefon</label><input type="text"
+                    class="form-control" name="nomor_telefon" placeholder="Masukkan Nomor Telefon"
+                    value="<?php echo htmlspecialchars($profile['nomor_telefon']); ?>"></div>
                 <div class="col-md-12"><label class="labels">Alamat Rumah</label><input type="text" class="form-control"
-                    name="alamat_rumah" placeholder="Masukkan Alamat Rumah" value="<?php echo htmlspecialchars($profile['alamat_rumah']); ?>"></div>
-                <div class="col-md-12"><label class="labels">Email</label><input type="email" class="form-control" name="email"
-                    placeholder="Masukkan Email" value="<?php echo htmlspecialchars($profile['email']); ?>" readonly></div>
+                    name="alamat_rumah" placeholder="Masukkan Alamat Rumah"
+                    value="<?php echo htmlspecialchars($profile['alamat_rumah']); ?>"></div>
+                <div class="col-md-12"><label class="labels">Email</label><input type="email" class="form-control"
+                    name="email" placeholder="Masukkan Email" value="<?php echo htmlspecialchars($profile['email']); ?>"
+                    readonly></div>
                 <div class="col-md-12"><label class="labels">NIK</label><input type="text" class="form-control"
-                    name="nik" placeholder="Masukkan NIK" value="<?php echo htmlspecialchars($profile['nik']); ?>"></div>
-                <div class="col-md-12"><label class="labels">Tanggal Lahir</label><input type="date" class="form-control"
-                    name="tanggal_lahir" placeholder="Masukkan Tanggal Lahir" value="<?php echo htmlspecialchars($profile['tanggal_lahir']); ?>"></div>
-                <div class="col-md-12"><label class="labels">Jenis Kelamin</label><input type="text" class="form-control"
-                    name="jenis_kelamin" placeholder="Masukkan Jenis Kelamin" value="<?php echo htmlspecialchars($profile['jenis_kelamin']); ?>"></div>
+                    name="nik" placeholder="Masukkan NIK" value="<?php echo htmlspecialchars($profile['nik']); ?>">
+                </div>
+                <div class="col-md-12"><label class="labels">Tanggal Lahir</label><input type="date"
+                    class="form-control" name="tanggal_lahir" placeholder="Masukkan Tanggal Lahir"
+                    value="<?php echo htmlspecialchars($profile['tanggal_lahir']); ?>"></div>
+                <div class="col-md-12"><label class="labels">Jenis Kelamin</label><input type="text"
+                    class="form-control" name="jenis_kelamin" placeholder="Masukkan Jenis Kelamin"
+                    value="<?php echo htmlspecialchars($profile['jenis_kelamin']); ?>"></div>
               </div>
               <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Simpan
                   Profile</button></div>
