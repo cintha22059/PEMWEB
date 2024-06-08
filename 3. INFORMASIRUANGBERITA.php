@@ -174,17 +174,25 @@ include "conn/sesion.php"
 <body>
     <?php include "asset/navbar.php" ?>
     <svg style="margin-top: -18%; width: 100%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#760504" fill-opacity="1" d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+        <path fill="#760504" fill-opacity="1"
+            d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
         </path>
     </svg>
     <header>
         <h1>Layanan Pengaduan - Ruang Berita</h1>
     </header>
+    <button type="button" class="btn btn-light" <button type="button" class="btn btn-light"
+            onclick="history.back()">
+            <a href="index.php">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.VJ1cfFaYuE91j19X1Xb7ggHaHa&pid=Api&P=0&h=220"
+                    width="20px"></a>
+        </button>
     <div class="container news-container">
         <div class="card news-item">
             <img src="img/news1.jpeg" alt="News 1">
             <h2>Perubahan Layanan Pengaduan Online</h2>
             <div class="card-body">
+                <p class="text-sm-start">01-023-2024 23:00:00</p>
                 <p class="card-text">Pada tanggal 1 Maret 2024, Layanan Pengaduan Online kami mengalami perubahan besar.
                     Kami telah memperbarui antarmuka pengguna untuk meningkatkan kemudahan penggunaan dan meningkatkan
                     efisiensi dalam penanganan pengaduan. Dengan perubahan ini, pengguna akan mengalami proses yang
@@ -281,7 +289,7 @@ include "conn/sesion.php"
     <footer>
         <?php include "footer.html" ?>
     </footer>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

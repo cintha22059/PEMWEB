@@ -1,9 +1,9 @@
 <?php
-include "conn/sesion.php";
-include "conn/db_connect.php";
+include "db_connect.php";
 
 if (isset($_POST["submit"])) {
     $category = $_POST["category"];
+    $nama_intansi = $_POST["nama_intansi"];
     $wilayah = $_POST["wilayah"];
     $judul_pengaduan = $_POST["judul_pengaduan"];
     $name = $_POST["name"];
@@ -19,22 +19,22 @@ if (isset($_POST["submit"])) {
     $video_base64 = !empty($video) ? base64_encode(file_get_contents($video)) : null;
 
     // Insert data ke tabel pengaduan
-    $sql_pengaduan = "INSERT INTO pengaduan (kategori_pengaduan, wilayah, judul_pengaduan, nama, email, pesan, gambar, video) VALUES ('$category', '$wilayah', '$judul_pengaduan', '$name', '$email', '$message', '$image_base64', '$video_base64')";
+    $sql_pengaduan = "INSERT INTO pengaduan (kategori_pengaduan,intansi, wilayah, judul_pengaduan, nama, email, pesan, gambar, video) VALUES ('$category','$nama_intansi', '$wilayah', '$judul_pengaduan', '$name', '$email', '$message', '$image_base64', '$video_base64')";
 
-    if ($conn->query($sql_pengaduan)) {
+    if ($db->query($sql_pengaduan)) {
         // Dapatkan ID pengaduan yang baru saja dimasukkan
-        $last_id = $conn->insert_id;
+        $last_id = $db->insert_id;
 
         // Insert status pengaduan ke tabel status_pengaduan dengan status awal null
         $sql_status = "INSERT INTO status_pengaduan (id_pengaduan, status) VALUES ('$last_id', null)";
 
-        if ($conn->query($sql_status)) {
+        if ($db->query($sql_status)) {
             echo "<script>alert('Pengaduan berhasil dikirim! ID Pengaduan: " . $last_id . "');</script>";
         } else {
-            echo "<script>alert('Error saat menambahkan status pengaduan: " . $sql_status . "<br>" . $conn->error . "');</script>";
+            echo "<script>alert('Error saat menambahkan status pengaduan: " . $sql_status . "<br>" . $db->error . "');</script>";
         }
     } else {
-        echo "<script>alert('Error saat menambahkan pengaduan: " . $sql_pengaduan . "<br>" . $conn->error . "');</script>";
+        echo "<script>alert('Error saat menambahkan pengaduan: " . $sql_pengaduan . "<br>" . $db->error . "');</script>";
     }
 }
 ?>
@@ -46,7 +46,7 @@ if (isset($_POST["submit"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="indexstyle.css" >
+    <link rel="stylesheet" href="indexstyle.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Web Layanan Pengaduan</title>
     <style>
@@ -118,7 +118,7 @@ if (isset($_POST["submit"])) {
         }
 
         h3 {
-            
+
             color: #2e4052;
             font-size: 20px;
         }
@@ -194,15 +194,17 @@ if (isset($_POST["submit"])) {
     <div class="main-wrapper">
         <div class="container">
             <h1>Layanan Pengaduan</h1>
-
             <div class="category">
-        <h2>Pengaduan</h2>
-        <form action="#" method="POST" enctype="multipart/form-data" >
-        <?php 
+                <h2>Pengaduan</h2>
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <?php
+                    $sql_intansi = "SELECT nama_intansi FROM intansi_negara";
+                    $result_intansi = $db->query($sql_intansi);
                     $sql_kategori = "SELECT kategori FROM kategori_pengaduan";
-                    $result_kategori = $conn->query($sql_kategori);
+                    $result_kategori = $db->query($sql_kategori);
                     $sql_wilayah = "SELECT kecamatan FROM wilayah";
-                    $result_wilayah = $conn->query($sql_wilayah);
+                    $result_wilayah = $db->query($sql_wilayah);
+
                     if ($result_kategori->num_rows > 0) {
                         echo '<div class="form-group">
                                 <label for="category">Kategori Pengaduan:</label>
@@ -216,7 +218,19 @@ if (isset($_POST["submit"])) {
                     } else {
                         echo "Tidak ada data kategori pengaduan.";
                     }
+                    if ($result_intansi->num_rows > 0) {
+                        echo '<div class="form-group">
+                                <label for="nama_intansi">Intansi:</label>
+                                <select name="nama_intansi" required>';
+                        while ($row = $result_intansi->fetch_assoc()) {
+                            echo '<option value="' . $row["nama_intansi"] . '">' . $row["nama_intansi"] . '</option>';
+                        }
 
+                        echo '</select>
+                            </div>';
+                    } else {
+                        echo "Tidak ada data wilayah.";
+                    }
                     if ($result_wilayah->num_rows > 0) {
                         echo '<div class="form-group">
                                 <label for="wilayah">Wilayah:</label>
@@ -232,7 +246,7 @@ if (isset($_POST["submit"])) {
                     }
                     ?>
                     <div class="form-group">
-                        <label for="judul_pengaduan">Judul Pegaduan:</label>
+                        <label for="judul_pengaduan">judul_pegaduan:</label>
                         <input type="text" name="judul_pengaduan" required>
                     </div>
                     <div class="form-group">
@@ -310,17 +324,9 @@ if (isset($_POST["submit"])) {
             </div>
         </div>
     </div>
-
-    <svg style="margin-top: -18%; width: 150%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#fff" fill-opacity="1"
-            d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
-        </path>
-    </svg>
-
     <footer>
         <?php include "footer.html" ?>
     </footer>
-    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

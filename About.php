@@ -115,6 +115,11 @@ p {
 <body>
     <?php include "asset/navbar.php" ?>
     <header>
+    <button type="button" class="btn btn-light" onclick="history.back()">
+            <a href="index.php">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.VJ1cfFaYuE91j19X1Xb7ggHaHa&pid=Api&P=0&h=220"
+                    width="20px"></a>
+        </button>
         <div class="container">
             <h1>Layanan Pengaduan Online Masyarakat Tuban</h1>
             <p>Layanan Pengaduan Online Masyarakat Tuban adalah platform yang dirancang untuk memudahkan masyarakat Tuban dalam menyampaikan pengaduan secara online. 
@@ -290,4 +295,4 @@ p {
     </footer>
     
 </body>
-</html>
+</html>|

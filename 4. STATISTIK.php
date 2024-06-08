@@ -170,16 +170,21 @@ $conn->close();
 </head>
 
 <body>
-<?php include "asset/navbar.php" ?>
+    <?php include "asset/navbar.php" ?>
     <svg style="margin-top: -18%; width: 100%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#760504" fill-opacity="1"
             d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
         </path>
     </svg>
     <div class="header">
+
         <h1>Statistik dan Analisis</h1>
-    </div>
-    <div class="chart-container">
+    </div> <button type="button" class="btn btn-light" <button type="button" class="btn btn-light"
+        onclick="history.back()">
+        <a href="index.php">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.VJ1cfFaYuE91j19X1Xb7ggHaHa&pid=Api&P=0&h=220" width="40px"></a>
+    </button>
+    <div class="chart-container card card-body">
         <div class="chart-header">
             <h2>Jumlah Pengaduan per Jenis</h2>
         </div>
@@ -233,7 +238,7 @@ $conn->close();
         </div>
     </div>
 
-    <div class="chart-container">
+    <div class="chart-container card card-body">
         <div class="chart-header">
             <h2>Pengaduan Terbanyak dari Wilayah</h2>
         </div>
@@ -259,7 +264,7 @@ $conn->close();
             </div>
         </div>
     </div>
-
+    <div class="chart-container card card-body">
     <h2 class="chart-label">10 Pengaduan Terbaru</h2>
     <table>
         <thead>
@@ -279,7 +284,7 @@ $conn->close();
             <?php endforeach; ?>
         </tbody>
     </table>
-
+    </div>
     <svg style="margin-top: -18%; width: 150%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#fff" fill-opacity="1"
             d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
