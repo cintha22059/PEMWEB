@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">TUBAN</a>
+        <a class="navbar-brand" href="index.php">
+            <img src="/img/LOGO LAPOR.png" alt="Layanan Aspirasi Masyarakat" width="30" height="30" class="d-inline-block align-top">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,14 +26,14 @@
                 <li class="nav-item"><a class="nav-link" href="About.php">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="notification.html">Notifikasi</a></li>
                 <li class="nav-item"><a class="nav-link" href="profile_user.php">Profile</a></li>
-</div>
-                <?php
-                if (isset($_SESSION['username'])) { // Periksa apakah session username sudah diset
-                echo '<li><a href="#"> ' . $_SESSION['username'] . '</a></li>'; // Tampilkan username jika sudah login
-            } else {
-                echo '<li><a href="login.php">Login</a></li>'; // Tampilkan link login jika belum login
-            }
-            ?>
+                <div>
+                    <?php
+                    if (isset($_SESSION['username'])) { // Periksa apakah session username sudah diset
+                    echo '<li><a href="#"> ' . $_SESSION['username'] . '</a></li>'; // Tampilkan username jika sudah login
+                } else {
+                    echo '<li><a href="login.php">Login</a></li>'; // Tampilkan link login jika belum login
+                }
+                ?>
                 </div>
             </ul>
         </div>
