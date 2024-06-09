@@ -1,8 +1,9 @@
 <?php
 include "conn/sesion.php"
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@ include "conn/sesion.php"
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+            margin-bottom: 20px;
             padding: 0;
             background: linear-gradient(to bottom, #760504, #b12b24, #760504);
             color: #333;
@@ -90,14 +91,14 @@ include "conn/sesion.php"
         tr:nth-child(even) {
             background-color: #f0f0f0;
         }
+        
     </style>
 </head>
 <?php include "asset/navbar.php" ?>
+
 <body>
-    <svg style="margin-top: -18%; width: 100%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#760504" fill-opacity="1" d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
-        </path>
-    </svg>
+    <?php include "asset/navbar.php"; ?>
+    
     <div class="content-wrapper container">
         <h1>Lacak Pengaduan</h1>
         <form method="POST">
@@ -167,16 +168,6 @@ include "conn/sesion.php"
         </table>
     </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#fff" fill-opacity="1"
-            d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
-        </path>
-    </svg>
-
-    <footer>
-        <?php include "footer.html"; ?>
-    </footer>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -184,5 +175,8 @@ include "conn/sesion.php"
         integrity="sha384-KyZXEAg3QhqLMpG8r+Zmi2KxmeTISw3gxy6R9W7D1bTl5V5ltzQ+Ay4b+8Qk6F9z"
         crossorigin="anonymous"></script>
 </body>
+<footer class="footer-space">
+    <?php include "footer.html"; ?>
+</footer>
 
 </html>

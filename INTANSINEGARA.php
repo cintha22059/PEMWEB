@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<link rel="stylesheet" href="indexstyle.css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<title>Instansi Negara - Layanan Pengaduan</title>
+	<title>Statistik dan Analisis - Layanan Pengaduan</title>
 	<style>
+		/* CSS */
 		body {
 			font-family: 'Roboto', sans-serif;
 			background-color: #f5f5f5;
@@ -178,6 +180,9 @@
 		.ag-courses_item:nth-child(6n) .ag-courses-item_bg {
 			background-color: #760504;
 		}
+
+
+
 		@media only screen and (max-width: 979px) {
 			.ag-courses_item {
 				-ms-flex-preferred-size: calc(50% - 30px);
@@ -188,6 +193,7 @@
 				font-size: 24px;
 			}
 		}
+
 		@media only screen and (max-width: 767px) {
 			.ag-format-container {
 				width: 96%;
@@ -219,6 +225,7 @@
 	</style>
 </head>
 <?php include "asset/navbar.php" ?>
+
 <body>
 	<div" class="header">
         <h1>Instansi dan Lembaga Negara</h1>
@@ -264,7 +271,7 @@
 					<div class="ag-courses-item_bg"></div>
 
 					<div class="ag-courses-item_title">
-					Kantor Kepolisian Resor (Polres) Tuban
+					Badan Kementrian Sosial (BKS) Tuban
 					</div>
 
 					<div class="ag-courses-item_date-box">
@@ -381,15 +388,6 @@
 		</div>
 	</div>
 	</div>
-
-	<svg style="margin-top: -18%; width: 150%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#fff" fill-opacity="1"
-            d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
-        </path>
-    </svg>
-    <footer>
-        <?php include "footer.html" ?>
-    </footer>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -407,7 +405,9 @@
 			drawWilayahChart();
 		});
 	</script>
-	
 </body>
+<footer class="footer-space">
+    <?php include "footer.html"; ?>
+</footer>
 
 </html>

@@ -15,7 +15,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #dfe1e7;
+    background: linear-gradient(to bottom, #760504, #b12b24, #760504);
 }
 
 .container {
@@ -114,12 +114,8 @@ p {
 </style></head>
 <body>
     <?php include "asset/navbar.php" ?>
+    
     <header>
-    <button type="button" class="btn btn-light" onclick="history.back()">
-            <a href="index.php">
-                <img src="https://tse3.mm.bing.net/th?id=OIP.VJ1cfFaYuE91j19X1Xb7ggHaHa&pid=Api&P=0&h=220"
-                    width="20px"></a>
-        </button>
         <div class="container">
             <h1>Layanan Pengaduan Online Masyarakat Tuban</h1>
             <p>Layanan Pengaduan Online Masyarakat Tuban adalah platform yang dirancang untuk memudahkan masyarakat Tuban dalam menyampaikan pengaduan secara online. 
@@ -128,13 +124,18 @@ p {
             </p>
         </div>
     </header>
-    <section class="team">
+    <button type="button" class="btn btn-light" onclick="history.back()">
+            <a href="index.php">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.VJ1cfFaYuE91j19X1Xb7ggHaHa&pid=Api&P=0&h=220"
+                    width="20px"></a>
+        </button>
+        <section class="team">
         <div class="container">
             <h2>Tim Kami</h2>
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="profile-card">
-                        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                        <img src="img\fotobalgis.jpg" alt="Profile Picture">
                         <div class="profile-content">
                             <div class="profile-name">Balgis</div>
                             <div class="profile-role">22051214052</div>
@@ -149,7 +150,7 @@ p {
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="profile-card">
-                        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                        <img src="img\fotofirda.jpg" alt="Profile Picture">
                         <div class="profile-content">
                             <div class="profile-name">Firda</div>
                             <div class="profile-role">22051214053</div>
@@ -164,7 +165,7 @@ p {
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="profile-card">
-                        <img src="img\Teams-1.jpg" alt="Profile Picture">
+                        <img src="img\fototino.jpg" alt="Profile Picture">
                         <div class="profile-content">
                             <div class="profile-name">Valentino</div>
                             <div class="profile-role">22051214054</div>
@@ -179,7 +180,7 @@ p {
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="profile-card">
-                        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                        <img src="img\fotocintha.jpg" alt="Profile Picture">
                         <div class="profile-content">
                             <div class="profile-name">Cintha</div>
                             <div class="profile-role">22051214059</div>
@@ -194,7 +195,7 @@ p {
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="profile-card">
-                        <img src="https://th.bing.com/th/id/R.f4d37b48b12251c11bb9599736fa50ad?rik=WMXWlxtScsyDkA&riu=http%3a%2f%2f3.bp.blogspot.com%2f-Y5YRXMZWWfE%2fUkjc8r7hLrI%2fAAAAAAAABRI%2fV-rOHtppThQ%2fs1600%2fGambar%2bPesawat%2bTempur%2bRafale%2b2.jpg&ehk=C6qFOL9P4eljiurAEruLpb242wWwYRltoNUBt1Oh2HM%3d&risl=&pid=ImgRaw&r=0" alt="Profile Picture">
+                        <img src="img\fotodaffa.png" alt="Profile Picture">
                         <div class="profile-content">
                             <div class="profile-name">Raihan</div>
                             <div class="profile-role">22051214069</div>
@@ -283,16 +284,13 @@ p {
             </div>
         </div>
     </section>
-
-    <svg style="margin-top: -18%; width: 150%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#fff" fill-opacity="1"
-            d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+    <svg style="margin-top: -18%; width: 100%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#b12b24" fill-opacity="1" d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
         </path>
     </svg>
-
+    
     <footer>
         <?php include "footer.html" ?>
     </footer>
-    
 </body>
-</html>|
+</html>

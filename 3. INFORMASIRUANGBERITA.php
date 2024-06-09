@@ -1,14 +1,16 @@
 <?php
 include "conn/sesion.php"
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="indexstyle.css" />
     <title>Ruang Berita - Layanan Pengaduan</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -168,8 +170,9 @@ include "conn/sesion.php"
         }
     </style>
 </head>
-<?php include "asset/navbar.php" ?>
+
 <body>
+    <?php include "asset/navbar.php" ?>
     <svg style="margin-top: -18%; width: 100%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#760504" fill-opacity="1"
             d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
@@ -189,7 +192,7 @@ include "conn/sesion.php"
             <img src="img/news1.jpeg" alt="News 1">
             <h2>Perubahan Layanan Pengaduan Online</h2>
             <div class="card-body">
-                <p class="text-sm-start">01-023-2024 23:00:00</p>
+                <p class="text-sm-start">01-23-2024 23:00:00</p>
                 <p class="card-text">Pada tanggal 1 Maret 2024, Layanan Pengaduan Online kami mengalami perubahan besar.
                     Kami telah memperbarui antarmuka pengguna untuk meningkatkan kemudahan penggunaan dan meningkatkan
                     efisiensi dalam penanganan pengaduan. Dengan perubahan ini, pengguna akan mengalami proses yang
@@ -198,9 +201,10 @@ include "conn/sesion.php"
             </div>
         </div>
         <div class="card news-item" id="news2">
-            <img src="news2.png" alt="News 2">
+            <img src="img/news2.png" alt="News 2">
             <h2>Fitur Baru di Layanan Pengaduan Online</h2>
             <div class="card-body">
+            <p class="text-sm-start">10-23-2024 19:00:00</p>
                 <p class="card-text">Kami telah menambahkan beberapa fitur baru di Layanan Pengaduan Online kami. Kami
                     senang mengumumkan bahwa Layanan Pengaduan Online kami telah melakukan pembaruan besar. Kami telah
                     memperbaiki beberapa bug dan menambahkan beberapa fitur baru yang akan mempermudah penggunaan
@@ -209,9 +213,10 @@ include "conn/sesion.php"
             </div>
         </div>
         <div class="card news-item" id="news3">
-            <img src="news3.png" alt="News 3">
+            <img src="img/news3.png" alt="News 3">
             <h2>Informasi Layanan Pengaduan Online</h2>
             <div class="card-body">
+            <p class="text-sm-start">01-25-2024 01:00:00</p>
                 <p class="card-text">Kami ingin menginformasikan bahwa Layanan Pengaduan Online kami telah tersedia
                     untuk umum. Kami menyediakan layanan ini untuk mempermudah pengguna dalam mengajukan pengaduan
                     terkait masalah yang dialami. Kami akan melakukan tindak lanjut terhadap setiap pengaduan yang masuk
@@ -220,9 +225,10 @@ include "conn/sesion.php"
             </div>
         </div>
         <div class="card news-item" id="news4">
-            <img src="news4.png" alt="News 4">
+            <img src="img/news4.png" alt="News 4">
             <h2>Perubahan Layanan Pengaduan Online</h2>
             <div class="card-body">
+            <p class="text-sm-start">05-23-2024 18:00:00</p>
                 <p class="card-text">Pada tanggal 1 Maret 2024, Layanan Pengaduan Online kami mengalami perubahan besar.
                     Kami telah memperbarui antarmuka pengguna untuk meningkatkan kemudahan penggunaan dan meningkatkan
                     efisiensi dalam penanganan pengaduan. Dengan perubahan ini, pengguna akan mengalami proses yang
@@ -234,7 +240,7 @@ include "conn/sesion.php"
 
     <div id="modal1" class="modal">
         <div class="modal-content">
-            <img src="news1.jpeg" alt="News 1" class="modal-img">
+            <img src="img/news1.jpeg" alt="News 1" class="modal-img">
             <h2>Perubahan Layanan Pengaduan Online</h2>
             <p class="card-text">Pada tanggal 1 Maret 2024, Layanan Pengaduan Online kami mengalami perubahan besar.
                 Kami telah memperbarui antarmuka pengguna untuk meningkatkan kemudahan penggunaan dan meningkatkan
@@ -245,7 +251,7 @@ include "conn/sesion.php"
 
     <div id="modal2" class="modal">
         <div class="modal-content">
-            <img src="news2.png" alt="News 2" class="modal-img">
+            <img src="img/news2.png" alt="News 2" class="modal-img">
             <h2>Fitur Baru di Layanan Pengaduan Online</h2>
             <p class="card-text">Kami telah menambahkan beberapa fitur baru di Layanan Pengaduan Online kami. Kami
                 senang mengumumkan bahwa Layanan Pengaduan Online kami telah melakukan pembaruan besar. Kami telah
@@ -256,7 +262,7 @@ include "conn/sesion.php"
 
     <div id="modal3" class="modal">
         <div class="modal-content">
-            <img src="news3.png" alt="News 3" class="modal-img">
+            <img src="img/news3.png" alt="News 3" class="modal-img">
             <h2>Informasi Layanan Pengaduan Online</h2>
             <p class="card-text">Kami ingin menginformasikan bahwa Layanan Pengaduan Online kami telah tersedia untuk
                 umum. Kami menyediakan layanan ini untuk mempermudah pengguna dalam mengajukan pengaduan terkait masalah
@@ -267,7 +273,7 @@ include "conn/sesion.php"
 
     <div id="modal4" class="modal">
         <div class="modal-content">
-            <img src="news4.png" alt="News 4" class="modal-img">
+            <img src="img/news4.png" alt="News 4" class="modal-img">
             <h2>Perubahan Layanan Pengaduan Online</h2>
             <div class="card-body">
                 <p class="card-text">Pada tanggal 1 Maret 2024, Layanan Pengaduan Online kami mengalami perubahan besar.

@@ -1,5 +1,6 @@
 <?php
 include "db_connect.php";
+
 if (isset($_POST["submit"])) {
     $category = $_POST["category"];
     $nama_intansi = $_POST["nama_intansi"];
@@ -18,7 +19,7 @@ if (isset($_POST["submit"])) {
     $video_base64 = !empty($video) ? base64_encode(file_get_contents($video)) : null;
 
     // Insert data ke tabel pengaduan
-    $sql_pengaduan = "INSERT INTO pengaduan (kategori_pengaduan,intansi, wilayah, judul_pengaduan, nama, email, pesan, gambar, video) VALUES ('$category','$nama_intansi', '$wilayah', '$judul_pengaduan', '$name', '$email', '$message', '$image_base64', '$video_base64')";
+    $sql_pengaduan = "INSERT INTO pengaduan (kategori_pengaduan,instansi, wilayah, judul_pengaduan, nama, email, pesan, gambar, video) VALUES ('$category','$nama_intansi', '$wilayah', '$judul_pengaduan', '$name', '$email', '$message', '$image_base64', '$video_base64')";
 
     if ($db->query($sql_pengaduan)) {
         // Dapatkan ID pengaduan yang baru saja dimasukkan
@@ -37,14 +38,17 @@ if (isset($_POST["submit"])) {
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="indexstyle.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Layanan Pengaduan</title>
+    <title>Web Layanan Pengaduan</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -185,6 +189,7 @@ if (isset($_POST["submit"])) {
     </style>
 </head>
 <?php include "asset/navbar.php" ?>
+
 <body>
     <div class="main-wrapper">
         <div class="container">
@@ -269,9 +274,11 @@ if (isset($_POST["submit"])) {
                     </div>
                 </form>
             </div>
+
             <!-- Tombol Kembali -->
             <button id="kembaliButton">Kembali</button>
         </div>
+
         <div class="sidebar">
             <div class="user">
                 <div class="user-info">
@@ -317,9 +324,6 @@ if (isset($_POST["submit"])) {
             </div>
         </div>
     </div>
-    <footer class="footer-space">
-    <?php include "footer.html"; ?>
-    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -334,5 +338,8 @@ if (isset($_POST["submit"])) {
     </script>
 
 </body>
+<footer class="footer-space">
+    <?php include "footer.html"; ?>
+</footer>
 
 </html>

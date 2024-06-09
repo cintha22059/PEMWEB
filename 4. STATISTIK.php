@@ -1,6 +1,7 @@
 <?php
 include "conn/db_connect.php";
 include "conn/sesion.php";
+
 // Fungsi untuk mengeksekusi query dan menangani error
 function executeQuery($conn, $query)
 {
@@ -10,6 +11,7 @@ function executeQuery($conn, $query)
     }
     return $result;
 }
+
 // Ambil data jumlah pengaduan per jenis
 $queryJenis = "SELECT kategori_pengaduan, COUNT(*) as jumlah FROM pengaduan GROUP BY kategori_pengaduan";
 $resultJenis = executeQuery($conn, $queryJenis);
@@ -17,6 +19,7 @@ $dataJenis = [];
 while ($row = $resultJenis->fetch_assoc()) {
     $dataJenis[] = $row;
 }
+
 // Ambil data rata-rata waktu penyelesaian per jenis
 $queryWaktu = "SELECT kategori_pengaduan, AVG(tanggal) as rata_waktu FROM pengaduan GROUP BY kategori_pengaduan";
 $resultWaktu = executeQuery($conn, $queryWaktu);
@@ -24,6 +27,7 @@ $dataWaktu = [];
 while ($row = $resultWaktu->fetch_assoc()) {
     $dataWaktu[] = $row;
 }
+
 // Ambil data jumlah pengaduan per wilayah
 $queryWilayah = "SELECT wilayah, COUNT(*) as jumlah FROM pengaduan GROUP BY wilayah";
 $resultWilayah = executeQuery($conn, $queryWilayah);
@@ -31,6 +35,7 @@ $dataWilayah = [];
 while ($row = $resultWilayah->fetch_assoc()) {
     $dataWilayah[] = $row;
 }
+
 // Ambil data 10 pengaduan terakhir
 $queryTerbaru = "
     SELECT p.id_pengaduan, p.tanggal, s.status 
@@ -44,10 +49,14 @@ $dataTerbaru = [];
 while ($row = $resultTerbaru->fetch_assoc()) {
     $dataTerbaru[] = $row;
 }
+
 $conn->close();
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,6 +65,7 @@ $conn->close();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Statistik dan Analisis - Layanan Pengaduan</title>
     <style>
+        /* CSS */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f5f5f5;
@@ -158,14 +168,16 @@ $conn->close();
         }
     </style>
 </head>
-<?php include "asset/navbar.php" ?>
+
 <body>
+    <?php include "asset/navbar.php" ?>
     <svg style="margin-top: -18%; width: 100%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#760504" fill-opacity="1"
             d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
         </path>
     </svg>
     <div class="header">
+
         <h1>Statistik dan Analisis</h1>
     </div> <button type="button" class="btn btn-light" <button type="button" class="btn btn-light"
         onclick="history.back()">
@@ -273,14 +285,7 @@ $conn->close();
         </tbody>
     </table>
     </div>
-    <svg style="margin-top: -18%; width: 150%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#fff" fill-opacity="1"
-            d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
-        </path>
-    </svg>
-    <footer>
-        <?php include "footer.html" ?>
-    </footer>
+
     <script>
         const jenisData = <?php echo json_encode($dataJenis); ?>;
         const waktuData = <?php echo json_encode($dataWaktu); ?>;
@@ -376,5 +381,8 @@ $conn->close();
     </script>
 
 </body>
+<footer class="footer-space">
+    <?php include "footer.html"; ?>
+</footer>
 
 </html>
