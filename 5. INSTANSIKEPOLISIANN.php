@@ -138,7 +138,7 @@ header .contact-info p {
     </style>
 </head>
 <body>
-<?php include "navbar.php" ?>
+<?php include "asset/navbar.php" ?>
     <header>
         <div class="logo">
             <img src="logo.png" alt="Logo">
