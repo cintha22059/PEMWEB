@@ -3,16 +3,14 @@ include "conn/sesion.php"
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<link rel="stylesheet" href="indexstyle.css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-	<title>Statistik dan Analisis - Layanan Pengaduan</title>
+	<title>Kategori Pengaduan - Layanan Pengaduan</title>
 	<style>
-		/* CSS */
 		body {
 			font-family: 'Roboto', sans-serif;
 			background-color: #f5f5f5;
@@ -228,7 +226,6 @@ include "conn/sesion.php"
 	</style>
 </head>
 <?php include "asset/navbar.php" ?>
-
 <body>
 	<div class="header">
 		<h1>Kategori Pengaduan</h1>
@@ -414,12 +411,9 @@ include "conn/sesion.php"
             d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
         </path>
     </svg>
-
     <footer>
         <?php include "footer.html" ?>
     </footer>
-
-	
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -437,6 +431,7 @@ include "conn/sesion.php"
 			drawWilayahChart();
 		});
 	</script>
+	
 </body>
 
 </html>
