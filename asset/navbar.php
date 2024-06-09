@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">
-            <img src="/img/LOGO LAPOR.png" alt="Layanan Aspirasi Masyarakat" width="30" height="30" class="d-inline-block align-top">
+        <a  href="index.php">
+            <img src="img\LOGO LAPOR.PNG" alt="Layanan Aspirasi Masyarakat"  style= "margin-top:-25px; margin-bottom:-25px;  height:100px; witdh:100px;" >
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,4 +38,4 @@
             </ul>
         </div>
     </div>
-</nav>   
+</nav>
