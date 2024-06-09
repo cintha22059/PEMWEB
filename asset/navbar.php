@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
-        <a  href="index.php">
-            <img src="img\LOGO LAPOR.PNG" alt="Layanan Aspirasi Masyarakat"  style= "margin-top:-25px; margin-bottom:-25px;  height:100px; witdh:100px;" >
+        <a href="index.php">
+            <img src="img/LOGO LAPOR.PNG" alt="Layanan Aspirasi Masyarakat" style="margin-top:-25px; margin-bottom:-25px; height:100px; width:100px;">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -12,7 +12,7 @@
                     <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layanan</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Layanan</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="7. Pengaduan.php">Pengaduan</a>
                         <a class="dropdown-item" href="3. INFORMASIRUANGBERITA.php">Ruang Berita</a>
@@ -26,15 +26,13 @@
                 <li class="nav-item"><a class="nav-link" href="About.php">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="notification.html">Notifikasi</a></li>
                 <li class="nav-item"><a class="nav-link" href="profile_user.php">Profile</a></li>
-                <div>
-                    <?php
-                    if (isset($_SESSION['username'])) { // Periksa apakah session username sudah diset
-                    echo '<li><a href="#"> ' . $_SESSION['username'] . '</a></li>'; // Tampilkan username jika sudah login
+                <?php
+                if (isset($_SESSION['username'])) { // Periksa apakah session username sudah diset
+                    echo '<li class="nav-item"><a class="nav-link" href="#">' . $_SESSION['username'] . '</a></li>'; // Tampilkan username jika sudah login
                 } else {
-                    echo '<li><a href="login.php">Login</a></li>'; // Tampilkan link login jika belum login
+                    echo '<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>'; // Tampilkan link login jika belum login
                 }
                 ?>
-                </div>
             </ul>
         </div>
     </div>
