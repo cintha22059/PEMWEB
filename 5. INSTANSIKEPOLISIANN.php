@@ -8,137 +8,137 @@ include "conn/sesion.php"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="indexstyle.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Website Example</title>
+    <title>Instansi Kepolisian - Layanan Pengaduan</title>
     <style>
         body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF; /* Change the background color of the whole page */
-}
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF; /* Change the background color of the whole page */
+        }
 
-header {
-  background-color:  #ffc857;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+      header {
+            background-color:  #ffc857;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-header .logo {
-  display: flex;
-  align-items: center;
-}
+      header .logo {
+            display: flex;
+            align-items: center;
+        }
 
-header .logo img {
-  width: 100px;
-}
+      header .logo img {
+            width: 100px;
+        }
 
-header .logo h1 {
-  font-size: 24px;
-  margin-left: 10px;
-  color: #000000; /* Change the color of the text in the header */
-}
+      header .logo h1 {
+            font-size: 24px;
+            margin-left: 10px;
+            color: #000000; /* Change the color of the text in the header */
+        }
 
-header .contact-info {
-  text-align: right;
-  color: #000000; /* Change the color of the contact info text */
-}
+      header .contact-info {
+            text-align: right;
+            color: #000000; /* Change the color of the contact info text */
+        }
 
-header .contact-info p {
-  margin: 0;
-  margin-bottom: 5px;
-}
+      header .contact-info p {
+            margin: 0;
+            margin-bottom: 5px;
+        }
 
-.status {
-  background-color: #E0E0E0;
-  padding: 20px;
-  color: #000000; /* Change the color of the text in the status section */
-}
+      .status {
+            background-color: #E0E0E0;
+            padding: 20px;
+            color: #000000; /* Change the color of the text in the status section */
+        }
 
-.status h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #2E4052; /* Change the color of the title in the status section */
-}
+      .status h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2E4052; /* Change the color of the title in the status section */
+        }
 
-.filters {
-  margin-bottom: 1rem;
-}
+      .filters {
+            margin-bottom: 1rem;
+        }
 
-.filter-button {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border: none;
-  background-color: #ffc857;
-  color:#000000;
-  transition: background-color 0.3s, color 0.3s;
-}
+      .filter-button {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border: none;
+            background-color: #ffc857;
+            color:#000000;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-.filter-button:hover {
-  background-color: #ddd;
-  color: #000000;
-}
+      .filter-button:hover {
+            background-color: #ddd;
+            color: #000000;
+        }
 
-.filter-button.active {
-  background-color: #2E4052; /* Change the background color of the active filter button */
-  color: white;
-}
+      .filter-button.active {
+            background-color: #2E4052; /* Change the background color of the active filter button */
+            color: white;
+        }
 
-.status .pengaduan {
-  list-style: none;
-  padding: 0;
-}
+      .status .pengaduan {
+            list-style: none;
+            padding: 0;
+        }
 
-.status .pengaduan li {
-  border-bottom: 1px solid #D0D0D0;
-  padding: 15px 0;
-  display: flex;
-  align-items: center;
-  background-color: #FFFFFF; /* Change the background color of the complaint items */
-  margin-bottom: 1rem;
-}
+      .status .pengaduan li {
+            border-bottom: 1px solid #D0D0D0;
+            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            background-color: #FFFFFF; /* Change the background color of the complaint items */
+            margin-bottom: 1rem;
+        }
 
-.status .pengaduan li .header {
-  margin-right: 1rem;
-  display: flex;
-  align-items: center;
-}
+      .status .pengaduan li .header {
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+        }
 
-.status .pengaduan li .header img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 1rem;
-}
+      .status .pengaduan li .header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+        }
 
-.status .pengaduan li .header p {
-  margin: 0;
-  color: #412234; /* Change the color of the text in the complaint header */
-  font-weight: bold;
-}
+      .status .pengaduan li .header p {
+            margin: 0;
+            color: #412234; /* Change the color of the text in the complaint header */
+            font-weight: bold;
+        }
 
-.status .pengaduan li .content {
-  flex: 1;
-}
+      .status .pengaduan li .content {
+            flex: 1;
+        }
 
-.status .pengaduan li .content p {
-  margin-bottom: 5px;
-  color: #2E4052; /* Change the color of the complaint text */
-}
+      .status .pengaduan li .content p {
+            margin-bottom: 5px;
+            color: #2E4052; /* Change the color of the complaint text */
+        }
 
-.status .pengaduan li .status {
-  background-color: #412234; /* Change the background color of the complaint status */
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-left: 1rem;
-}
+      .status .pengaduan li .status {
+            background-color: #412234; /* Change the background color of the complaint status */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 1rem;
+        }
     </style>
 </head>
-<body>
 <?php include "asset/navbar.php" ?>
+<body>
     <header>
         <div class="logo">
             <img src="logo.png" alt="Logo">
