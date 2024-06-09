@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha384-Za2dTLzhCf+j9LtKQOzW+3//yKY3QzqGSPJkStNC5w3N1QZCaG52fNk7Aw5gDKXa" crossorigin="anonymous" />
   <link rel="stylesheet" href="path/to/font-awesome/css/all.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="indexstyle.css" />
-  <title>Galeri Pengaduan</title>
+  <title>Galeri Pengaduan - Layanan Pengaduan</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-    }
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
 
     .title {
-      margin-top: 60px;
-      background-color: #760504;
-      padding: 20px;
-      text-align: center;
-      color: white;
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
+        margin-top: 60px;
+        background-color: #760504;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
 
     .complaint {
       border: 2px solid #b12b24;
@@ -155,12 +154,12 @@
     }
   </style>
 </head>
-<?php include "navbar.html" ?>
-
+<?php include "asset/navbar.php"?>
 <body style="background: radial-gradient(circle at center, #ff7eb3, #760504);">
   <h2 class="title">Galeri Pengaduan</h2>
-  <p style="text-align:center;padding-bottom:20px;color:white;">Di sini, Anda dapat melihat pengaduan-pengaduan
-    sebelumnya yang telah diatasi atau masih dalam proses penanganan.</p>
+    <p style="text-align:center;padding-bottom:20px;color:white;">
+      Di halaman ini, Anda dapat melihat daftar pengaduan yang telah diselesaikan maupun yang masih dalam proses penanganan.
+    </p>
   <?php
   include ("db_connect.php");
   $sql = "SELECT * FROM pengaduan";
