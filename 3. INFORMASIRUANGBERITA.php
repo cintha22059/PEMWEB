@@ -1,16 +1,14 @@
 <?php
 include "conn/sesion.php"
-    ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="indexstyle.css" />
     <title>Ruang Berita - Layanan Pengaduan</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -170,9 +168,8 @@ include "conn/sesion.php"
         }
     </style>
 </head>
-
+<?php include "asset/navbar.php" ?>
 <body>
-    <?php include "asset/navbar.php" ?>
     <svg style="margin-top: -18%; width: 100%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#760504" fill-opacity="1"
             d="M0,192L120,208C240,224,480,256,720,256C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
