@@ -237,7 +237,7 @@
 					<div class="ag-courses-item_bg"></div>
 
 					<div class="ag-courses-item_title">
-						Kementrian Komunikasi dan Informatika
+					Pemerintah Kabupaten Tuban
 					</div>
 
 					<div class="ag-courses-item_date-box">
@@ -254,7 +254,7 @@
 					<div class="ag-courses-item_bg"></div>
 
 					<div class="ag-courses-item_title">
-						Kepolisian Negara Republik Indonesia
+					Dewan Perwakilan Rakyat Daerah (DPRD) Tuban
 					</div>
 
 					<div class="ag-courses-item_date-box">
@@ -271,7 +271,7 @@
 					<div class="ag-courses-item_bg"></div>
 
 					<div class="ag-courses-item_title">
-						Kementrian Sosial
+					Kantor Kepolisian Resor (Polres) Tuban
 					</div>
 
 					<div class="ag-courses-item_date-box">
@@ -288,7 +288,7 @@
 					<div class="ag-courses-item_bg"></div>
 
 					<div class="ag-courses-item_title">
-						Kementrian Pendidkan, kebudayaan, Riset dan Teknologi
+					Komando Distrik Militer 0811/Tuban
 					</div>
 
 					<div class="ag-courses-item_date-box">
@@ -305,7 +305,7 @@
 					<div class="ag-courses-item_bg"></div>
 
 					<div class="ag-courses-item_title">
-						Kementrian Kelautan dan Perikanan
+					Kejaksaan Negeri Tuban
 					</div>
 
 					<div class="ag-courses-item_date-box">
@@ -322,7 +322,7 @@
 					<div class="ag-courses-item_bg"></div>
 
 					<div class="ag-courses-item_title">
-						Badan Kepegawaian Negara
+					Pengadilan Negeri Tuban
 					</div>
 
 					<div class="ag-courses-item_date-box">
@@ -339,7 +339,7 @@
 					<div class="ag-courses-item_bg">
 					</div>
 					<div class="ag-courses-item_title">
-						Mahkamah Agung RI
+					Kantor Kementerian Agama Kabupaten Tuban
 					</div>
 
 					<div class="ag-courses-item_date-box">
@@ -356,7 +356,7 @@
 					<div class="ag-courses-item_bg"></div>
 
 					<div class="ag-courses-item_title">
-						badan Pusat Statistik
+					Dinas Kependudukan dan Pencatatan Sipil (Disdukcapil) Tuban
 					</div>
 
 					<div class="ag-courses-item_date-box">
@@ -373,7 +373,7 @@
 					<div class="ag-courses-item_bg"></div>
 
 					<div class="ag-courses-item_title">
-						Kementrian Dalam Negeri
+					Kantor Pajak Pratama Tuban
 					</div>
 
 					<div class="ag-courses-item_date-box">

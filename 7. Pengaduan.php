@@ -246,7 +246,7 @@ if (isset($_POST["submit"])) {
                     }
                     ?>
                     <div class="form-group">
-                        <label for="judul_pengaduan">judul_pegaduan:</label>
+                        <label for="judul_pengaduan">Judul Pengaduan:</label>
                         <input type="text" name="judul_pengaduan" required>
                     </div>
                     <div class="form-group">
@@ -282,8 +282,8 @@ if (isset($_POST["submit"])) {
         <div class="sidebar">
             <div class="user">
                 <div class="user-info">
-                    <h3>Cintha Hafrida Putri</h3>
-                    <p>@usernamekamu</p>
+                    <h3>Balgis Putri Prioni</h3>
+                    <p>@balgispp</p>
                     <div class="user-status-container">
                         <div class="user-status">
                             <span>Terverifikasi</span> 0
@@ -324,9 +324,6 @@ if (isset($_POST["submit"])) {
             </div>
         </div>
     </div>
-    <footer>
-        <?php include "footer.html" ?>
-    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -341,5 +338,8 @@ if (isset($_POST["submit"])) {
     </script>
 
 </body>
+<footer class="footer-space">
+    <?php include "footer.html"; ?>
+</footer>
 
 </html>
